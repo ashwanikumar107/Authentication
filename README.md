@@ -32,8 +32,6 @@ A secure and scalable **Authentication System** built using modern backend techn
 ├── models/
 ├── routes/
 ├── config/
-├── middleware/
-├── .env
 ├── app.js / server.js
 ```
 
@@ -74,19 +72,19 @@ npm run dev
 ### ➤ Register
 
 ```
-POST /api/auth/register
+POST /api/auth/Practice/register
 ```
 
 ### ➤ Login
 
 ```
-POST /api/auth/login
+POST /api/auth/Practice/login
 ```
 
 ### ➤ Logout
 
 ```
-POST /api/auth/logout
+POST /api/auth/Practice/logout
 ```
 
 ---
