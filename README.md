@@ -54,7 +54,7 @@ npm install
 3. Create `.env` file:
 
 ```
-PORT=3000
+PORT=3100
 MONGO_URI=your_mongodb_uri
 JWT_SECRET=your_secret_key
 ```
@@ -72,19 +72,19 @@ npm run dev
 ### ➤ Register
 
 ```
-POST /api/auth/Practice/register
+POST /api/auth/practice/register
 ```
 
 ### ➤ Login
 
 ```
-POST /api/auth/Practice/login
+POST /api/auth/practice/login
 ```
 
 ### ➤ Logout
 
 ```
-POST /api/auth/Practice/logout
+POST /api/auth/practice/logout
 ```
 
 ---
