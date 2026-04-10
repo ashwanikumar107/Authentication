@@ -181,3 +181,28 @@ export async function logout(req, res){
         message: "User is Logout Successfully"
     })
 }
+
+export async function logoutAll(req, res){
+    const refreshToken = req.cookies.refreshToken;
+
+    if(!refreshToken){
+        return res.status(401).json({
+            message: "Invalid Refresh Token"
+        })
+    }
+
+    const decoded = jwt.verify(refreshToken, config.JWT_SECRET);
+
+    await sessionModel.updateMany({
+        user: decoded._id,
+        revoked: false
+    },{
+        revoked: true
+    })
+
+    res.clearCookie("refreshToken");
+
+    res.status(200).json({
+        message: "Logout from all "
+    })
+}
